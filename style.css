@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+/* common */
+
+body {
+  margin: 0;
+}
+
+header {
+  margin: 0 auto;
+  color: #111;
+  text-align: center;
+  padding: 24px;
+  background: url(free\ mannga-1.jpeg) repeat-x center bottom;
+  text-align: center;
+  padding-top: 64px;
+  opacity: .5;
+}
+
+h2 {
+  margin: 0;
+  font-weight: normal;
+  text-align: center;
+  color: red;
+  padding: 32px 0;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+
+h3 {
+  margin: 0;
+  font-weight: normal;
+  color: rgb(31, 75, 207);
+}
+
+p {
+  margin: 0;
+  padding: 8px 0;
+}
+
+/* section contents */
+
+.contents-1 {
+  display: flex;
+  gap: 32px;
+  padding: 32px 8px;
+  min-width: 700px;
+  margin: 0 auto;
+  width: calc(100% - 32px);
+}
+
+.contents-2 {
+  display: flex;
+  gap: 32px;
+  padding: 32px 8px;
+  min-width: 700px;
+  margin: 0 auto;
+  width: calc(100% - 32px);
+  flex-direction: row-reverse;
+}
+
+/* footer */
+
+footer {
+  background: #333;
+  color: white;
+  padding: 64px 0;
+  text-align: center;
+}
+
+small {
+  font-size: 14px;
+}
