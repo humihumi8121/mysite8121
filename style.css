@@ -3,6 +3,7 @@
 /* common */
 
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
 }
 
@@ -10,9 +11,7 @@ header {
   margin: 0 auto;
   color: #111;
   text-align: center;
-  padding: 24px;
   background: url(free\ mannga-1.jpeg) repeat-x center bottom;
-  text-align: center;
   padding-top: 64px;
   opacity: .5;
 }
@@ -25,49 +24,90 @@ h2 {
   padding: 32px 0;
 }
 
+main {
+  padding: 20px;
+}
+
 a:hover {
   opacity: 0.7;
 }
 
+.blog-post {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px; /* 画像とテキストの間のスペース */
+  margin-bottom: 20px; /* 各ブログポストの間のスペース */
+}
+
+.blog-post div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.blog-post .blog-image {
+  width: 100%;
+  max-width: 300px; /* 画像の最大幅を指定 */
+  height: auto /* 画像のアスペクト比を保持 */
+}
+
+.blog-post .blog-content  {
+  max-width: 600px; /* テキストの最大幅を指定 */
+}
+
+
 
 h3 {
-  margin: 0;
   font-weight: normal;
   color: rgb(31, 75, 207);
+  margin: 0;
 }
 
 p {
-  margin: 0;
-  padding: 8px 0;
+ text-align: left;
 }
 
-/* section contents */
 
-.contents-1 {
-  display: flex;
-  gap: 32px;
-  padding: 32px 8px;
-  min-width: 700px;
-  margin: 0 auto;
-  width: calc(100% - 32px);
+
+/* スマホ用 */
+
+/* @media (max-width: 600px) {
+  .blog-post {
+      flex-direction: column;
+      align-items: center;
+  }
+  .blog-image {
+      max-width: none;
+      width: 80%;
+  }
+  .blog-content {
+      text-align: center;
+  }
+} */
+
+@media (min-width: 600px) {
+  .blog-post {
+      flex-direction: row;
+      align-items: flex-start;
+  }
+
+  .blog-post div {
+      align-items: center;
+  }
+
+  .blog-post .blog-content {
+      margin-left: 20px; /* 画像とテキストの間に余白を追加 */
+  }
 }
 
-.contents-2 {
-  display: flex;
-  gap: 32px;
-  padding: 32px 8px;
-  min-width: 700px;
-  margin: 0 auto;
-  width: calc(100% - 32px);
-  flex-direction: row-reverse;
-}
 
 /* footer */
 
 footer {
   background: #333;
   color: white;
-  padding: 64px 0;
+  padding: 20px;
   text-align: center;
 }
 
