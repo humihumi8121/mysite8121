@@ -1,0 +1,75 @@
+@charset "utf-8";
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  width: 100%;
+}
+
+header {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.container-1 {
+  display: flex;
+  margin: 0; /* 余白を取り除く */
+  padding: 0; /* 必要に応じてパディングも取り除く */
+  width: 100%; /* コンテナの幅をビューポートに合わせる */
+  max-width: 100%; /* 最大幅をビューポートの100%に設定する */
+}
+
+aside {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0; /* ここでマージンを設定 */
+}
+
+
+main {
+  flex: 5; 
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 0;
+  display: block;
+}
+
+ul li a:hover {
+  background-color: #ddd;
+}
+
+.container-2 {
+  display: flex;
+  justify-content: space-around; /* カード間に均等なスペースを作ります */
+  flex-wrap: wrap; /* 画面幅が狭くなった場合、カードを次の行に折り返します */
+  gap: 20px; 
+}
+
+}
+/* 既存のスタイルは省略 */
+
+
+/* レスポンシブデザイン用のメディアクエリ内 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  aside, main {
+    flex: none;
+    width: auto;
+    margin: 0; /* スマートフォン表示でのマージンを取り除く */
+  }
+}
+
